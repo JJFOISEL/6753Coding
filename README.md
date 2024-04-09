@@ -5,3 +5,11 @@ Go Robokings!!
 
 
 
+## Git commands: 
+- Cloning the repo: `git clone <git-url>`
+- Checkout a new branch `git checkout -b <name of branch>`
+- Check out a branch `git checkout <name of branch`
+- Tracking/adding changes `git add . `
+- Committing changes ` git commit -m "your comment here"`
+- Push new branch to GitHub ` git push -u origin <name of your branch>`
+- Push additional branch changes to GitHub `git push`
