@@ -13,3 +13,4 @@ Go Robokings!!
 - Committing changes ` git commit -m "your comment here"`
 - Push new branch to GitHub ` git push -u origin <name of your branch>`
 - Push additional branch changes to GitHub `git push`
+- Check Git changes `git status`
