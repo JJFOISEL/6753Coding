@@ -7,10 +7,11 @@ Go Robokings!!
 
 ## Git commands: 
 - Cloning the repo: `git clone <git-url>`
-- Checkout a new branch `git checkout -b <name of branch>`
-- Check out a branch `git checkout <name of branch`
-- Tracking/adding changes `git add . `
-- Committing changes ` git commit -m "your comment here"`
-- Push new branch to GitHub ` git push -u origin <name of your branch>`
+- Checkout a brand new branch `git checkout -b <name of branch>` (fails if you've already made a branch with this name)
+- Check out (Goto) an existing branch `git checkout <name of branch>`
+- Tracking/adding changes `git add .` (the "." means it will add all existing changes)
+- Committing changes `git commit -m "your message here"`
+- Push new branch to GitHub `git push -u origin <name of your branch here>`
 - Push additional branch changes to GitHub `git push`
+- Stash changes for future use `git stash`
 - Check Git changes `git status`
