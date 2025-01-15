@@ -1,0 +1,10 @@
+{
+  "NetworkTables Settings": {
+    "mode": "Client (NT4)"
+  },
+  "transitory": {
+    "limelight": {
+      "open": true
+    }
+  }
+}
