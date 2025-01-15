@@ -52,30 +52,27 @@ public class LimeLightVision extends SubsystemBase {
     //method returns number ID of the detected tag, experimental/may not work
     public double getTID(){
         // Get the data from Limelight
-        double[] aprilTags = limelightTable.getEntry("tv").getDoubleArray(new double[0]);
+        double aprilTags = limelightTable.getEntry("tid").getDouble(-1);
     
-        if (aprilTags.length > 0) {
-            // If an AprilTag is detected, return its ID (assuming the first tag is used)
-            return (int) aprilTags[0];
-        } else {
-            // No AprilTag detected
-            return -1;
-        }
+        return aprilTags;
         
     }
 
     //method returns a pose based on limelight data
     public Pose2d getBotPose(){
-        double[] botpose = limelightTable.getEntry("botpose").getDoubleArray(new double[6]);
+        double[] botpose = limelightTable.getEntry("botpose").getDoubleArray(new double[18]);
         
         //may need to have a range of valid positions to throw out impractical poses
-        if (botpose.length != 6){
-            return null;
-        }
 
-        double xMeters = botpose[1];
-        double yMeters = botpose[2];
+        double xMeters = botpose[0];
+        double yMeters = botpose[1];
         double yawDegrees = botpose[5];
+
+        if (botpose.length <= 10){
+            xMeters = botpose.length;
+            yMeters = botpose.length;
+            yawDegrees = botpose.length;
+        }
 
         return new Pose2d(xMeters, yMeters, Rotation2d.fromDegrees(yawDegrees));
     }
