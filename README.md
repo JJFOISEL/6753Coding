@@ -6,7 +6,8 @@ Go Robokings!!
 
 
 ## Git commands: 
-- Cloning the repo: `git clone <git-url>`
+- Change directory `cd <file-path>` (General command)
+- Cloning the repo: `git clone <git-url>` (Make sure you're in the right directory)
 - Checkout a brand new branch `git checkout -b <name of branch>` (fails if you've already made a branch with this name)
 - Check out (Goto) an existing branch `git checkout <name of branch>`
 - Tracking/adding changes `git add .` (the "." means it will add all existing changes)
