@@ -63,6 +63,7 @@ public class LimeLightVision extends SubsystemBase {
         double[] botpose = limelightTable.getEntry("botpose").getDoubleArray(new double[18]);
         
         //may need to have a range of valid positions to throw out impractical poses
+        //Agreed lol
 
         double xMeters = botpose[0];
         double yMeters = botpose[1];
@@ -75,6 +76,11 @@ public class LimeLightVision extends SubsystemBase {
         }
 
         return new Pose2d(xMeters, yMeters, Rotation2d.fromDegrees(yawDegrees));
+    }
+
+    //method here to set pipelines based on what's needed
+    public void setPipeline(int mode) {
+        limelight.getEntry("pipeline").setNumber(mode);
     }
 
     //method sets the LED mode (0 = pipeline default, 1 = off, 2 = blink, 3 = on)

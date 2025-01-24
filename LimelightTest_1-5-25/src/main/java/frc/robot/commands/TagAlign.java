@@ -23,6 +23,16 @@ public class TagAlign extends Command{
         addRequirements(m_robotDrive, m_vision);
     }
 
+/*Pipeline can be switched based on number of apriltag
+
+when button to align pressed
+    check number of apriltag
+    if apriltag = one from this [list]
+        switch pipeline to xyz
+    if apriltag = from the different [list]
+    DEFAULT CASE (maybe after it's moved manually a sufficient distance?) It will return back to the basic pipeline, desined to see as far and efficiently as possible for constant position checking
+
+*/
     public void execute(){
         if (m_vision.hasTarget()) {
             double tx = m_vision.getTx();
